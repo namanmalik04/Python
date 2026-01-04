@@ -1,0 +1,51 @@
+Operators  - Description
+ 
+.         Matches with any single character except newline ‘\n’.
+ 
+?        match 0 or 1 occurrence of the pattern to its left
+ 
++        1 or more occurrences of the pattern to its left
+ 
+*        0 or more occurrences of the pattern to its left
+ 
+\w       Matches with a alphanumeric characters only
+ 
+\W       matches non alphanumeric character.
+ 
+\d       Matches with digits [0-9]
+ 
+\D       matches with non-digits
+ 
+ 
+[..]    Matches any single character in a square bracket
+ 
+ 
+[^..]   matches any single character not in square bracket
+ 
+ 
+ 
+•RefCA3_1 – https://github.com/topics/python-pandas
+•RefCA3_2 – https://github.com/lshang0311/pandas-examples
+•RefCA3_3 – https://pandas.pydata.org/docs/user_guide/10min.html
+•RefCA3_4 – Json Tutorial
+•RefCA3_5 – CSV Tutorial
+•RefCA3_6 – XML Tutorial
+•RefCA3_7 – Pandas Tutorial
+GitHub - lshang0311/pandas-examples: Pandas Examples
+Pandas Examples. Contribute to lshang0311/pandas-examples development by creating an account on GitHub.
+ 
+•Object Oriented Programming in Python
+  Object Oriented in Python
+ 
+•Functional Programming in Python
+  Functional Programming
+Python OOP Tutorials - Working with Classes
+Python Object-Oriented Tutorials. In this series, we will be learning how to create classes in Python, and also the best practices for working with these cla...
+ 
+•Cory Schafer video tutorials- https://www.youtube.com/channel/UCCezIgC97PvUuR4_gbFUs5g
+•Tutorial:Python Tutorial PDF (3.7) by Guido Van Rossum
+https://bugs.python.org/file47781/Tutorial_EDIT.pdf
+•Real Python: https://realpython.com/
+Corey Schafer
+Welcome to my Channel. This channel is focused on creating tutorials and walkthroughs for software developers, programmers, and engineers. We cover topics for all different skill levels, so whether...
+ 

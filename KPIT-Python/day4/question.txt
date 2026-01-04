@@ -1,0 +1,43 @@
+Create two classes:
+Battery → Represents individual battery cells with 5 attributes (including Enums).
+BatteryManagementSystem → Manages a dictionary of Battery objects and performs operations using lambda and comprehensions.
+ 
+-Enums to Use
+BatteryType → LI_ION, NIMH, LEAD_ACID, SOLID_STATE
+BatteryStatus → CHARGING, DISCHARGING, IDLE, FAULT
+ 
+-Battery Class
+Attributes:
+battery_id → Unique identifier for the battery.
+battery_type → Enum BatteryType.
+status → Enum BatteryStatus.
+voltage → Current voltage of the battery.
+temperature → Current temperature of the battery.
+ 
+BatteryManagementSystem Class
+Attributes:
+batteries → Dictionary where key = battery_id, value = Battery object.
+max_voltage_limit, min_voltage_limit, max_temp_limit → Safety thresholds.
+alerts → List of alerts generated.
+ 
+Functionalities (using lambda & comprehensions)
+Add a new Battery object to dictionary
+      → Validate Enums and store in batteries.
+Remove a Battery by ID
+Update Battery status:→ Change Enum status dynamically.
+Monitoring & Calculation
+Calculate total voltage of all batteries.
+Calculate average temperature.
+Find battery with max voltage
+Find battery with min temperature.
+Filter batteries above max temperature
+Filter batteries below min voltage.
+Generate alerts for abnormal conditions:→ Use lambda to check and append alerts.
+Create summary dictionary of battery voltages.
+Create list of battery types.
+Sort batteries by voltage
+Sort batteries by temperature descending
+Count batteries by status
+Predict charging completion time:→ Lambda based on voltage difference and charging rate.
+Generate historical voltage trend:→ Extract voltages from logs using [h['voltage'] for h in history].
+Check if all batteries are healthy (within limits)

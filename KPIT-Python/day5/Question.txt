@@ -1,0 +1,83 @@
+'''
+Design a system to monitor environmental conditions using different types of sensors.
+
+Base Class: Sensor
+• Attributes: 
+o sensor_id (string)
+o location (string)
+o reading (float)
+o unit (string)
+o alerts (list of strings): e.g., ["Low Battery", "Signal Lost"]
+o metadata (dict): e.g.{"manufacturer": "ABC Corp", "model": "X100", "warranty_years": 2}
+• Methods: 
+o Initialize attributes.
+o Getters and setters.
+o __repr__() for readable representation.
+o status_message(): Default message: "Sensor operational" (to be overridden).
+
+Derived Class 1: TemperatureSensor
+• Additional Attributes: 
+o historical_readings (list of floats): e.g., [22.5, 23.0, 21.8]
+o calibration_values (dict): e.g.{"offset": 0.5, "scale": 1.02}
+• Methods: 
+o Override status_message(): "Temperature Sensor: Normal" if reading between 15°C and 35°C else "Temperature Sensor: Alert".
+o average_temperature(): Compute average from historical_readings.
+o apply_calibration(): Adjust reading using calibration_values.
+
+Derived Class 2: HumiditySensor
+• Additional Attributes: 
+o sensor_age_years (int)
+o maintenance_log (list of strings): e.g., ["Filter replaced", "Firmware updated"]
+o performance_metrics (dict): e.g.{"accuracy": 98.5, "response_time_ms": 120}
+• Methods: 
+o Override status_message(): "Humidity Sensor: Optimal" if reading between 30% and 60% else "Humidity Sensor: Alert".
+o predict_remaining_life(): Remaining life = max(0, 10 - sensor_age_years).
+o last_maintenance(): Return last entry from maintenance_log.
+
+Create Objects
+• Create at least 3 TemperatureSensor objects and 2 HumiditySensor objects.
+• Store all objects in a single list called sensors.
+
+Function 1: filter_sensors_with_alerts(sensors)
+• Input: sensors (list of Sensor objects)
+• Task: Return all sensors that have at least one alert.
+• Output: List of Sensor objects with non-empty alerts.
+
+Function 2: sort_sensors_by_reading(sensors)
+• Input: sensors (list of Sensor objects)
+• Task: Sort sensors in ascending order of their reading.
+• Output: Sorted list of Sensor objects.
+
+Function 3: extract_sensor_ids(sensors)
+• Input: sensors (list of Sensor objects)
+• Task: Extract all sensor IDs into a list.
+• Output: List of strings (sensor IDs).
+
+Function 4: compute_average_reading(sensors)
+• Input: sensors (list of Sensor objects)
+• Task: Compute the average of all sensor readings.
+• Output: Float (average reading).
+
+Function 5: add_alert_to_sensor(sensor, alert)
+• Input: 
+o sensor → A single Sensor object (or derived class object).
+o alert → String representing the alert message (e.g., "Low Battery").
+• Task: 
+o Add the given alert to the sensor’s alerts list only if it is not already present.
+• Output: 
+o Updated Sensor object with the new alert added.
+• Constraints: 
+o Must handle: 
+ Duplicate prevention.
+ Empty alert string (ignore if blank).
+
+Function 6: display_all_sensors
+• Name: display_all_sensors(sensors)
+• Input: 
+o sensors → List of Sensor objects (including derived classes).
+• Task: 
+o Print details of each sensor in the list 
+o Include sensor type (TemperatureSensor or HumiditySensor).
+• Output: 
+o Printed representation of all sensor objects.
+'''
